@@ -57,6 +57,19 @@ class _IoMTScreenState extends State<IoMTScreen> {
                         const Padding(
                           padding: EdgeInsets.all(8.0),
                           child: Text(
+                            'Temperature',
+                            style: TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
                             'Celecus',
                             style: TextStyle(
                               fontSize: 20,
@@ -69,7 +82,8 @@ class _IoMTScreenState extends State<IoMTScreen> {
                           padding: const EdgeInsets.all(8.0),
                           // ignore: prefer_const_constructors
                           child: Text(
-                            snapshot.data.snapshot.value["Temp"].toString(),
+                            snapshot.data.snapshot.value["Temp"].toString() +
+                                " °C",
                             style: const TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
@@ -77,9 +91,6 @@ class _IoMTScreenState extends State<IoMTScreen> {
                           ),
                         ),
                       ],
-                    ),
-                    const SizedBox(
-                      height: 20,
                     ),
                     Column(
                       // ignore: prefer_const_literals_to_create_immutables
@@ -99,7 +110,8 @@ class _IoMTScreenState extends State<IoMTScreen> {
                           padding: const EdgeInsets.all(8.0),
                           // ignore: prefer_const_constructors
                           child: Text(
-                            snapshot.data.snapshot.value["farh"].toString(),
+                            snapshot.data.snapshot.value["farh"].toString() +
+                                " °F",
                             style: const TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
@@ -119,7 +131,7 @@ class _IoMTScreenState extends State<IoMTScreen> {
                           child: Text(
                             'Bool Control',
                             style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 25,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
